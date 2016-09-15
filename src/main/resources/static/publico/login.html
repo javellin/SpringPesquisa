@@ -1,0 +1,23 @@
+<div ng-controller="loginCtrl" class="container">
+    <div class="alert" ng-show="erro">
+        Usuário e/ou senha incorretos.
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        {{msg}}
+    </div>
+    <div style="margin-top: 150px;" class="row">
+        <div class="col-md-12">
+            <div class="wrap">
+                <p class="form-title">
+                    LOG IN</p>
+                <form action="/auth/j_spring_security_check" method="post" class="login">
+                    <input ng-model="usuario" name="username" id="username" type="text" placeholder="Usuário"/>
+                    <input ng-model="senha" name="password" id="password" type="password" placeholder="Senha"/>
+                    <input type="submit" value="Log in" class="btn btn-success btn-sm"/>
+                    <div style="margin-top: 25px; margin-left: 10px;" class="row">
+                        <a href="/#/cadastro">Quero me registrar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

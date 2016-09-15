@@ -1,0 +1,43 @@
+<div ng-controller="adminCtrl">
+    <div class="container">
+        <navbar></navbar>
+        <mensagens></mensagens>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b>Criação de usuário</b>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Usuário:</label>
+                        <input class="form-control" type="text" ng-model="usuario.usuario"/>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Senha:</label>
+                        <input class="form-control" type="password" ng-model="usuario.senha">
+                    </div>
+                </div>
+                <div style="margin-top: 15px;" class="row">
+                    <div class="col-md-6">
+                        <label>E-Mail:</label>
+                        <input class="form-control" type="text" ng-model="usuario.email"/>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Tipo de usuário:</label>
+                        <select ng-model="usuario.tipoUsuario" class="form-control">
+                            <option ng-repeat="tipo in tiposUsuario" value="{{tipo}}">
+                                {{tipo}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div style="margin-top: 15px;" class="row">
+                    <div class="col-md-12">
+                        <input type="submit" value="Criar" ng-click="criarUsuario()"
+                               class="btn btn-success"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

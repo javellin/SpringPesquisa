@@ -1,0 +1,22 @@
+<div ng-controller="cadastroCtrl" class="container">
+    <div style="margin-top: 150px;" class="row">
+        <div class="col-md-12">
+            <div class="wrap">
+                <p class="form-title">
+                    REGISTRO</p>
+                <form method="post" class="login">
+                    <input ng-model="usuario.usuario" name="username" id="username" type="text" placeholder="Usuário"/>
+                    <input ng-model="usuario.email" name="email" id="email" type="text" placeholder="E-Mail"/>
+                    <input ng-model="usuario.senha" name="password" id="senha" type="password" placeholder="Senha"/>
+                    <input ng-model="senhaRepetida" name="username" id="senhaRepetida" type="password"
+                           placeholder="Repita a senha"/>
+                    <input type="submit" value="Cadastrar" ng-click="registrar()" class="btn btn-success btn-sm"/>
+                    <div style="margin-top: 25px; margin-left: 10px;" class="row">
+                        <a href="/#/login">Clique aqui para entrar.</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -25,7 +25,11 @@ public class UsuarioNegocio {
         usuarioUser = usuarioRepositorio.findByUsuario(usuario.getUsuario());
         usuarioEmail = usuarioRepositorio.findByEmail(usuario.getEmail());
 
-        return usuarioUser == null && usuarioEmail == null;
+        if (usuarioUser == null && usuarioEmail == null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public Usuario buscarUsuarioAtual() {

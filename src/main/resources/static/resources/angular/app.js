@@ -10,7 +10,7 @@ app.config(function ($routeProvider, $httpProvider) {
     }).when("/login", {
         templateUrl: "/publico/login.html",
         controller: "loginCtrl"
-    }).when("/lucas", {
+    }).when("/admin", {
         templateUrl: "/admin/admin.html",
         controller: "adminCtrl"
     }).when("/comum", {
